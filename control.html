@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kontrol HP Jarak Jauh</title>
+  <style>
+    body { background: black; color: #00ffff; font-family: monospace; text-align: center; }
+    button { padding: 10px 20px; margin: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Kontrol HP Jarak Jauh</h1>
+  <button onclick="sendCommand('flash_on')">Nyalakan Senter</button>
+  <button onclick="sendCommand('flash_off')">Matikan Senter</button>
+  <button onclick="sendCommand('change_wallpaper')">Ganti Wallpaper</button>
+  <div id="status">Status: Menunggu perintah...</div>
+
+  <script>
+    function sendCommand(cmd) {
+      fetch('https://domainkamu.com/control.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ command: cmd })
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('status').innerText = 'Dikirim: ' + cmd + ', Respon: ' + data.status;
+      })
+      .catch(err => {
+        document.getElementById('status').innerText = 'Gagal kirim: ' + err;
+      });
+    }
+  </script>
+</body>
+</html>
