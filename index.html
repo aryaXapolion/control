@@ -1,34 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Kontrol HP Jarak Jauh</title>
-  <style>
-    body { background: black; color: #00ffff; font-family: monospace; text-align: center; }
-    button { padding: 10px 20px; margin: 10px; cursor: pointer; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentasi Modern</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
-<body>
-  <h1>Kontrol HP Jarak Jauh</h1>
-  <button onclick="sendCommand('flash_on')">Nyalakan Senter</button>
-  <button onclick="sendCommand('flash_off')">Matikan Senter</button>
-  <button onclick="sendCommand('change_wallpaper')">Ganti Wallpaper</button>
-  <div id="status">Status: Menunggu perintah...</div>
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sans">
 
+  <!-- Container -->
+  <div class="swiper h-screen">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1: Perkenalan -->
+      <div class="swiper-slide flex items-center justify-center">
+        <div class="text-center p-6">
+          <h1 class="text-5xl font-bold mb-4 animate-pulse">✨ Selamat Datang ✨</h1>
+          <p class="text-lg text-gray-300">Tema02: Perkembangan Ekonomi Digital</p>
+          <p class="mt-2 text-gray-400">Perkenalan:</p>
+          <p class="mt-2 text-gray-400">➣ 𝐀𝐤𝐛𝐚𝐫 𝐏𝐮𝐭𝐫𝐚 𝐏./𝟐</p>
+          <p class="mt-2 text-gray-400">➣ 𝐑𝐚𝐤𝐚 𝐑𝐚𝐟𝐢 𝐏./𝟐𝟒</p>
+          <p class="mt-2 text-gray-400">➣ 𝐑𝐚𝐧𝐠𝐠𝐚 𝐏𝐚𝐧𝐜𝐚 𝐒./𝟐𝟓</p>
+          <p class="mt-2 text-gray-400">➣ 𝐒𝐚𝐤𝐭𝐢 𝐀𝐫𝐲𝐚 𝐘./𝟐𝟗</p>
+        </div>
+      </div>
+
+  <div class="swiper-slide flex items-center justify-center">
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
+          
+               
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-semibold mb-4 text-white">𝐌𝐚𝐭𝐞𝐫𝐢 𝟏</h2>
+            <p class="text-gray-300">A. Uang dan lembaga</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Slide 2: Materi Pertama -->
+      <div class="swiper-slide flex items-center justify-center">
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
+          <img src="https://files.catbox.moe/w5abnx.jpeg" 
+               alt="Materi Pertama" class="rounded-xl shadow-lg">
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-semibold mb-4 text-white">1. asal mula terciptanya uang</h2>
+            <p class="text-gray-300">Uang berevolusi dari sistem barter, yang melibatkan pertukaran langsung barang dan jasa. Seiring waktu, kebutuhan akan alat tukar yang lebih praktis dan bernilai lebih stabil mendorong terciptanya berbagai bentuk uang, mulai dari uang komoditas (seperti logam mulia) hingga uang kertas. Bangsa Lydia diyakini sebagai yang pertama kali menggunakan uang logam pada abad ke-6 SM.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Materi Kedua -->
+      <div class="swiper-slide flex items-center justify-center">
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
+          <img src="https://files.catbox.moe/mghrx8.jpeg" 
+               alt="Materi Kedua" class="rounded-xl shadow-lg">
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-semibold mb-4 text-white">2. jenis-jenis dan fungsi uang</h2>
+            <p class="text-gray-300">Uang memiliki berbagai jenis dan fungsi yang saling berkaitan dalam sistem perekonomian. Jenis uang meliputi uang kartal (uang kertas dan koin), uang giral (simpanan di bank), dan uang elektronik (digital). Fungsinya mencakup sebagai alat tukar, satuan hitung, dan penyimpan nilai.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Materi Ketiga -->
+      <div class="swiper-slide flex items-center justify-center">
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
+          <img src="https://files.catbox.moe/ziz5n2.jpeg" 
+               alt="Materi Ketiga" class="rounded-xl shadow-lg">
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-semibold mb-4 text-white">3. Bagaimana bentuk Lembaga keuangan di masyarakat</h2>
+            <p class="text-gray-300">Secara umum, terdapat beberapa bentuk lembaga keuangan seperti perbankan, credit union, aset manajemen, pialang saham, building society (sejenis koperasi di Inggris), modal ventura, asuransi, koperasi, dana pensiun, dan lainnya.</p>
+          </div>
+        </div>
+      </div>
+      
+ <div class="swiper-slide flex items-center justify-center">
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
+          
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-semibold mb-4 text-white">𝐌𝐚𝐭𝐞𝐫𝐢 𝟐 🤬</h2>
+            <p class="text-gray-300">D. Literasi Finansial</p>
+          </div>
+        </div>
+      </div>
+      
+<!-- Slide 5: Materi 4 -->
+<div class="swiper-slide flex items-center justify-center">
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
+          <img src="https://files.catbox.moe/dtnft3.jpeg" 
+               alt="Materi Ketiga" class="rounded-xl shadow-lg">
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-semibold mb-4 text-white">1.Apa itu Literasi finansial</h2>
+            <p class="text-gray-300">Literasi finansial merujuk pada kemampuan seseorang untuk memahami dan mengelola keuangan dengan efektif. Hal ini meliputi pengetahuan tentang anggaran, tabungan, investasi, dan pemahaman mengenai berbagai produk keuangan seperti pinjaman, asuransi, dan reksa dana.</p>
+          </div>
+        </div>
+      </div>
+
+<!-- Slide 6: MMateri5 -->
+<div class="swiper-slide flex items-center justify-center">
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
+          <img src="https://files.catbox.moe/o0p1bw.jpeg" 
+               alt="Materi Ketiga" class="rounded-xl shadow-lg">
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-semibold mb-4 text-white">2.mengapa Literasi finansial itu penting</h2>
+            <p class="text-gray-300">Literasi finansial berperan penting dalam menciptakan masyarakat yang mandiri secara ekonomi. Dengan memahami risiko dan mengelola utang dengan baik, individu dapat menghindari gagal bayar yang berdampak pada sistem keuangan nasional.</p>
+          </div>
+        </div>
+      </div>
+
+<!-- Slide 5: Materi 6 -->
+<div class="swiper-slide flex items-center justify-center">
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
+          <img src="https://files.catbox.moe/w5abnx.jpeg" 
+               alt="Materi Ketiga" class="rounded-xl shadow-lg">
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-semibold mb-4 text-white">3.Cakupan kemampuan dari Literasi Finansial</h2>
+            <p class="text-gray-300">pengetahuan tentang anggaran, tabungan, investasi, dan pemahaman mengenai berbagai produk keuangan seperti pinjaman, asuransi, dan reksa dana.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Pertanyaan -->
+      <div class="swiper-slide flex items-center justify-center">
+        <div class="max-w-xl bg-gray-800/60 p-6 rounded-2xl shadow-xl">
+          <h2 class="text-3xl font-semibold mb-6 text-center text-white">Pertanyaan</h2>
+          <ol class="list-decimal text-left space-y-3 pl-5 text-gray-300">
+            <li>Dari sistem apa uang berevolusi sebelum adanya uang logam?</li>
+            <li>Bangsa manakah yang Pertama kali menggunakan uang logam?</li>
+            <li>Sebutkan 3 jenis uang dalam sistem perekonomian?</li>
+            <li>Apa saja Fungsi Utama uang?</li>
+            <li>Mengapa literasi Finansial sangat penting bagi indual dan Masyarakat?</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Slide 6: Penutup -->
+      <div class="swiper-slide flex items-center justify-center">
+        <div class="text-center bg-gray-800/60 p-8 rounded-2xl shadow-xl">
+          <h2 class="text-4xl font-bold mb-4 text-white">🎉 Terima Kasih 🎉</h2>
+          <p class="text-lg text-gray-300">Semoga materi ini bermanfaat untukmu.</p>
+          <p class="mt-2 italic text-gray-400">"RAMPUNG GESSSSS!!!"</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigasi -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Script Swiper -->
   <script>
-    function sendCommand(cmd) {
-      fetch('https://aryaxp.com/control.php', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ command: cmd })
-      })
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('status').innerText = 'Dikirim: ' + cmd + ', Respon: ' + data.status;
-      })
-      .catch(err => {
-        document.getElementById('status').innerText = 'Gagal kirim: ' + err;
-      });
-    }
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: false,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      keyboard: true,
+    });
   </script>
 </body>
-</html>
+          </html>
